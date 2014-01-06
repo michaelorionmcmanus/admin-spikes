@@ -1,0 +1,22 @@
+<h1>Create a Campaign</h1>
+
+<form action="">
+  <label>
+    First Name: {{view Ember.TextField valueBinding="first_name"}}
+  </label>
+  <label>
+    Last Name: {{view Ember.TextField valueBinding="last_name"}}
+  </label>
+  <label>
+    Practices: <input type="text" id="typeAhead"/>
+  </label>
+  <div>
+    <ul>
+      {{#each practice in practices}}
+      <li>{{practice.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <button {{action "submit"}}>Submit</button>
+</form>
